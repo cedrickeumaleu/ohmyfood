@@ -1,0 +1,1021 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* css accueil loading page */
+html {
+    min-height: 100%;
+    /*assurer que HTML ait la plus grande  hauteur que la fenêtre */
+    position: relative;
+}
+
+body {
+    height: 100%;
+    /* forcer l'élément BODY à correspondre à la hauteur de l'élément HTML */
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    animation: fadeOut 3s linear 0.2s 1;
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        z-index: 100;
+    }
+
+    90% {
+        opacity: 1;
+        z-index: 100;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    width: 35%;
+    height: 16px;
+}
+
+.logo a {
+    padding: 0 20px;
+}
+
+.map {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #D9D9D9;
+    padding: 8px 0;
+    box-shadow: #1111117a 0 -1px 2px 0px;
+}
+
+.map i {
+    margin-right: 10px;
+}
+
+p {
+    font-size: 10px;
+    color: #0b0b0b80;
+}
+
+.tete-page {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+}
+
+.text-tete {
+    padding: 0 16px;
+}
+
+.tete-page h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.tete-page p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tete-page a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 30px;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC 90%);
+}
+
+.btn-explorer {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav h2 {
+    margin-left: 13px;
+    font-size: 16px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 12px;
+    padding: 8px 4px;
+    position: relative;
+    width: 87%;
+}
+
+nav li :hover {
+    background-color: #9256dc2e;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 11px;
+    text-decoration: none;
+    color: #111;
+    width: 100%;
+    padding: 15px 18px;
+    box-shadow: #1111117a 0 1px 2px 0px;
+    border-radius: 12px;
+}
+
+nav a span {
+    padding: 2px 5px;
+    background-color: #9356DC;
+    position: absolute;
+    margin-left: -25px;
+    border-radius: 50px;
+    color: white;
+}
+
+nav i {
+    margin: 0 10px;
+}
+
+nav .fa-sharp.fa-solid.fa-store {
+    color: #9356DC;
+}
+
+section {
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+
+}
+
+section h2 {
+    margin-left: 13px;
+    font-size: 16px;
+}
+
+.resto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card-resto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: #1111117a 0 1px 4px 0px;
+    margin: 6px 0;
+}
+
+.card-resto img {
+    width: 100%;
+    height: 171px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+h4 {
+    font-size: 13px;
+}
+
+.card-resto span {
+    position: absolute;
+    background-color: #99E2D0;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-right: 15px;
+    color: #45796c;
+}
+
+.nouveaute {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-texte {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 12px;
+    justify-content: space-between;
+}
+
+
+/* animation coeur page d'accueil*/
+.card-texte i {
+    color: black;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.card-texte i:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    color: white;
+    font-weight: 600;
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titre i:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    color: white;
+    font-weight: 600;
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* style contact */
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70%;
+    height: 115px;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-mail {
+    width: 30%;
+    margin-top: 10px;
+}
+
+.form a {
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 16px;
+    font-size: 12px;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC 90%);
+    transition: background-color 500ms;
+}
+
+.form a:hover {
+    background-color: #9356DC;
+    color: #000;
+    transition: background-color 500ms;
+    transform: scale(1.15);
+}
+
+.form input {
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    color: #000;
+    font-size: 11px;
+    outline: none;
+    padding: .5rem 1.5rem;
+    margin-left: 4px;
+    width: 100%;
+    transition: background-color 500ms;
+}
+
+.form input:focus {
+    border: 2px solid #9356DC;
+}
+
+/*la pseudoclass not passe à true lorsque le sélecteur est à false*/
+.form input:not(:focus):invalid {
+    background: red;
+    border: 2px solid red;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.722);
+    position: relative;
+}
+
+.nav-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px 20px;
+}
+
+.nav-footer .card-footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.nav-footer img {
+    width: 85px;
+    padding-bottom: 10px;
+}
+
+.nav-footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.nav-footer i {
+    margin-right: 10px;
+}
+
+.nav-footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 14px;
+    color: #fff;
+}
+
+/*   css menu resto  */
+header {
+    width: 100%;
+    border-bottom: #D9D9D9;
+}
+
+.img-resto {
+    width: 100%;
+    position: relative;
+}
+
+.img-resto img {
+    width: 100%;
+    object-fit: cover;
+    height: 228px;
+}
+
+.menu {
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.titre {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: 5px 16px;
+}
+
+.titre h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.menu-resto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+/*animation after sous les titres du resto */
+.enchante span {
+    margin-left: 16px;
+    font-size: 11px;
+    transition: .4s;
+    animation: slideDown 2s;
+}
+
+.enchante span::after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    margin-left: 0;
+    background-color: #99E2D0;
+}
+
+/*animation chrosh sur les commandes*/
+.chrosh {
+    font-size: 10px;
+    padding: 10px;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    border-radius: 0 7px 7px 0;
+    background-color: #99E2D0;
+    z-index: 100;
+}
+
+.check i {
+    color: #99E2D0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 10px;
+    padding: 3px;
+    margin: 5px;
+}
+
+.commande .text {
+    padding: 10px;
+}
+
+.commande {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    background-color: #f2f2f2;
+    margin: 8px 0;
+    width: 100%;
+    transition: .4s;
+    animation: slideDown 2s;
+}
+
+.contene {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 90%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: -27px;
+    transition: margin-right 0.5s;
+    z-index: 101;
+}
+
+.contene:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #fff;
+    width: 83%;
+    border-radius: 8px 0 0 8px;
+    margin-right: -0px;
+    transition: margin-right 1s;
+}
+
+/* animation keyframes section menu resto */
+
+@keyframes slideDown {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.btn-commander {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-commander a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 30px;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC 135%);
+}
+
+.enchante {
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    flex-direction: column;
+    bottom: -330px;
+    position: absolute;
+
+}
+
+.footer-resto {
+    position: absolute;
+    bottom: -430px;
+}
+
+
+/*   css responsive tablette  */
+
+@media only screen and (min-width:535px) {
+    .logo img {
+        width: 35%;
+        height: 32px;
+    }
+
+    .img-resto img {
+        height: 340px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav h2 {
+        margin-left: 32px;
+        font-size: 16px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        border-radius: 12px;
+        padding: 3px 6px;
+        position: relative;
+        width: 27%;
+        margin-left: 30px;
+    }
+
+    nav a {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 11px;
+        text-decoration: none;
+        color: #111;
+        width: 100%;
+        padding: 12px 12px;
+        box-shadow: #1111117a 0 1px 2px 0px;
+        border-radius: 12px;
+    }
+
+    nav a span {
+        margin-left: -20px;
+    }
+
+    section h2 {
+        margin-left: 32px;
+        font-size: 16px;
+    }
+
+    .enchante {
+        bottom: -463px;
+        position: absolute;
+    }
+
+    .nav-footer {
+        padding: 10px 32px;
+        display: flex;
+    }
+    .nav-footer .card-footer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .card-footer a{
+        padding: 0 10px;
+    }
+    .nav-footer h2{
+        margin-left: 10px;
+    }
+
+    .titre {
+        width: 88%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+        justify-content: space-between;
+        margin: 5px 32px;
+    }
+
+    .contene {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        background-color: #fff;
+        width: 93%;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-right: -27px;
+        transition: margin-right 0.5s;
+        z-index: 101;
+    }
+
+    .contene:hover {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        background-color: #fff;
+        width: 90%;
+        border-radius: 8px 0 0 8px;
+        margin-right: -0px;
+        transition: margin-right 1s;
+    }
+
+    .enchante span {
+        margin-left: 32px;
+        font-size: 11px;
+    }
+
+    article .commande {
+        margin: 8px 32px;
+    }
+
+    .footer-resto {
+        position: absolute;
+        bottom: -535px;
+    }
+}
+
+/*   css responsive desktop  */
+
+@media only screen and (min-width: 800px) {
+    .logo img {
+        width: 35%;
+        height: 55px;
+    }
+
+    .img-resto img {
+        height: 825px;
+    }
+
+    p {
+        font-size: 12px;
+        color: #0b0b0b80;
+    }
+
+    nav {
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav ul {
+        width: 80%;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+
+    nav ul li {
+        width: 30%;
+        margin-left: unset;
+    }
+
+    nav ul a {
+        margin-left: -18px;
+        padding: 18px 12px;
+        width: 80%;
+        font-size: 13px;
+    }
+
+    nav a span {
+        padding: 8px 11px;
+        margin-left: -27px;
+    }
+
+    .nouveaute {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .card-resto span {
+        position: absolute;
+        background-color: #99E2D0;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 2px;
+        margin-top: 20px;
+        margin-right: 15px;
+        color: #45796c;
+    }
+
+    .resto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .card-resto {
+        width: 20%;
+        height: 235px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: #1111117a 0 1px 4px 0px;
+    }
+
+    /* css menu resto */
+
+    .enchante {
+        bottom: -705px;
+        position: absolute;
+        width: 100%;
+    }
+
+    .titre {
+        width: 94%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .titre h1 {
+        margin-left: 5px;
+    }
+
+    .contene {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        background-color: #fff;
+        width: 95%;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-right: -27px;
+        transition: margin-right 0.5s;
+        z-index: 101;
+    }
+
+    .contene:hover {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        background-color: #fff;
+        width: 93%;
+        border-radius: 8px 0 0 8px;
+        margin-right: -0px;
+        transition: margin-right 1s;
+    }
+
+    .enchante span {
+        margin-left: 37px;
+        font-size: 11px;
+    }
+
+    .enchante span ::after {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 2px;
+        margin-left: 104px;
+        background-color: #99E2D0;
+    }
+
+    .commande {
+        display: flex;
+        border-radius: 10px;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .nav-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 22px;
+    }
+    .nav-footer .card-footer{
+        display: flex;
+        flex-direction: row;
+        width: unset;
+    }
+
+    .nav-footer h2 {
+        margin-left: 20px;
+    }
+
+    .footer-resto {
+        position: absolute;
+        bottom: -735px;
+    }
+
+    .footer-resto .nav-footer {
+        padding: 10px 22px;
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
