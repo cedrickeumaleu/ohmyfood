@@ -403,6 +403,8 @@ form {
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 435px;
+    align-items: center;
 }
 
 .form {
@@ -689,14 +691,14 @@ header {
     border-radius: 25px 25px 0 0;
     display: flex;
     flex-direction: column;
-    bottom: -330px;
+    bottom: -482px;
     position: absolute;
 
 }
 
 .footer-resto {
     position: absolute;
-    bottom: -430px;
+    bottom: -571px;
 }
 
 
