@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfoot</title>
+    <title>Ohmyfoot | Le délice des sens</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,125 +15,139 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="../accueil.html"><i class="fa-solid fa-arrow-left"></i></a>
-            <img src="../images/logo/ohmyfood.png" alt="">
-        </div>
-        <div class="img-resto">
-            <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plat restaurant le delice des sens">
+    <!-- header sur la largeur complète du viewport-->
+    <header class="header">
+        <!-- largeur de la zone principale limitée à $max-width -->
+        <div class="container">
+            <div class="header-content">
+               <a class="header-content__backward" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+               <img class="header-content__logo" src="../images/logo/ohmyfood.png" alt="logo de ohmyfood">
+            </div>
         </div>
     </header>
-    <section class="enchante">
-        <div class="titre">
-            <h1>Le délice des sens</h1><i class="fa-sharp fa-regular fa-heart"></i>
-        </div>
-        <span>ENTREES</span>
-        <article class="menu-resto">
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>Tartare de thon</h4>
-                        <p>Assaisonné au yuzu</p>
-                    </div>
-                    <div class="chrosh">25€</div>
-                </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
+    <!-- largeur de la zone principale limitée à $max-width -->
+    <div class="container">
+        <main class="restaurant">
+            <div class="main-header">
+                
+                <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt=" restaurant la palette du gout">
             </div>
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>Bouchée de homard croustillant</h4>
-                        <p>Et sa farandole de petits légumes</p>
-                    </div>
-                    <div class="chrosh">35€</div>
+            <!-- page des menus du restaurant -->
+            <article class="main">
+                <div class="main__name">
+                    <h1>Le délice des sens</h1>
+                    <i class="far fa-heart heart"></i>
                 </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>Velouté de cèpes</h4>
-                        <p>Aux truffes</p>
-                    </div>
-                    <div class="chrosh">20€</div>
+                <!-- liste des entrées -->
+                <section class="dish">
+                    <h2 class="dish__title">Entrées</h2>
+                    <ul class="dish__list">
+                        <li class="dish-item dish-item--11">
+                            <div class="content">
+                                <p class="content__description"><b>Tartare de thon</b><br/>
+                                    Assaisonné au yuzu
+                                </p>
+                                <span class="content__price">25€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                        <li class="dish-item dish-item--12">
+                            <div class="content">
+                                <p class="content__description"><b>Bouchée de homard croustillant</b><br/>
+                                    Et sa farandole de petits légumes
+                                </p>
+                                <span class="content__price">35€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                        <li class="dish-item dish-item--13">
+                            <div class="content">
+                                <p class="content__description"><b>Velouté de cèpes</b><br/>
+                                    Aux truffes
+                                </p>
+                                <span class="content__price">20€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                    </ul>
+                </section>
+                <!-- liste des plats -->
+                <section class="dish">
+                    <h2 class="dish__title">Plats</h2>
+                    <ul class="dish__list">
+                        <li class="dish-item dish-item--21">
+                            <div class="content">
+                                <p class="content__description"><b>Poulet rôti aux herbes de Provence</b><br/>
+                                    Et sa crème de truffe
+                                </p>
+                                <span class="content__price">40€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                        <li class="dish-item dish-item--22">
+                            <div class="content">
+                                <p class="content__description"><b>Langouste rôtie </b><br/>
+                                    Et ses légumes de saison
+                                </p>
+                                <span class="content__price">35€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                        <li class="dish-item dish-item--23">
+                            <div class="content">
+                                <p class="content__description"><b>Côte de boeuf Angus</b><br/>
+                                    Et sa purée de panais
+                                </p>
+                                <span class="content__price">44€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                    </ul>
+                </section>
+                <!-- liste des desserts -->
+                <section class="dish">
+                    <h2 class="dish__title">Desserts</h2>
+                    <ul class="dish__list">
+                        <li class="dish-item dish-item--31">
+                            <div class="content">
+                                <p class="content__description"><b>Farandole de desserts</b><br/>
+                                    Du chef
+                                </p>
+                                <span class="content__price">18€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                        <li class="dish-item dish-item--32">
+                            <div class="content">
+                                <p class="content__description"><b>Crème brulée </b><br/>
+                                    Revisitée
+                                </p>
+                                <span class="content__price">22€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                        <li class="dish-item dish-item--33">
+                            <div class="content">
+                                <p class="content__description"><b>Tiramisu </b><br/>
+                                    À la noisette
+                                </p>
+                                <span class="content__price">23€</span>
+                            </div>
+                            <div class="checked"></div>
+                        </li>
+                    </ul>
+                </section>
+                <div class="main__btn">
+                    <button class="btn" name="order" type="submit">Commander</button>
                 </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-        </article>
-        <span>PLATS</span>
-        <article class="menu-resto">
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>Poulet rôti aux herbes de prove..</h4>
-                        <p>Et sa crème de truffe</p>
-                    </div>
-                    <div class="chrosh">40€</div>
-                </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>Langouste rôtie</h4>
-                        <p>Et ses légumes de saison</p>
-                    </div>
-                    <div class="chrosh">35€</div>
-                </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>côte de bœuf Angus</h4>
-                        <p>Et sa purée de panais</p>
-                    </div>
-                    <div class="chrosh">44€</div>
-                </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-        </article>
-        <span>DESSERTS</span>
-        <article class="menu-resto">
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>farandole de desserts</h4>
-                        <p>Du chef</p>
-                    </div>
-                    <div class="chrosh">18€</div>
-                </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>Crème brûlée</h4>
-                        <p>Revisité</p>
-                    </div>
-                    <div class="chrosh">22€</div>
-                </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-            <div class="commande">
-                <div class="contene">
-                    <div class="text">
-                        <h4>Tiramisu</h4>
-                        <p>À la noisette</p>
-                    </div>
-                    <div class="chrosh">25€</div>
-                </div>
-                <div class="check"><i class="fa-solid fa-check"></i></div>
-            </div>
-        </article>
-        <div class="btn-commander"><a href="">Commander</a></div>
-    </section>
-
+            </article>
+        </main>
+    </div>
+    <!-- footer sur la largeur complète du viewport-->
     <footer class="footer">
         <!-- largeur du contenu limitée à $max-width -->
         <div class="container">
-            <h2>ohmyfood</h2>
+            <div><h2>ohmyfood</h2></div>
             <!-- contenu du header traité comme un menu -->
             <nav>
                 <ul class="footer__menu">
@@ -145,7 +159,5 @@
             </nav>
         </div>
     </footer>
-
 </body>
-
 </html>
