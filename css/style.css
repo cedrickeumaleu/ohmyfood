@@ -170,7 +170,7 @@ body {
 
 .logo img {
     width: 35%;
-    height: 16px;
+    height: auto;
 }
 
 .logo a {
@@ -449,7 +449,7 @@ h4 {
 @media only screen and (min-width:768px) {
     .logo img {
         width: 35%;
-        height: 32px;
+        height: auto;
     }
 
     .img-resto img {
@@ -517,7 +517,7 @@ h4 {
 @media only screen and (min-width: 992px) {
     .logo img {
         width: 35%;
-        height: 55px;
+        height: auto;
     }
 
     .img-resto img {
